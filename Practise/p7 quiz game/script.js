@@ -684,18 +684,23 @@ function load() {
 }
 
 skip.addEventListener("click", () => {
-    let number = parseInt(Math.random() * questions.length);
-    while (number in questionNumber) {
-        number = parseInt(Math.random() * questions.length);
-    }
-    questionNumber.push(number);
-    question.innerText = `${questions[number].question}`
-    option1.value = `${questions[number].options[0]}`
-    option2.value = `${questions[number].options[1]}`
-    option3.value = `${questions[number].options[2]}`
-    option4.value = `${questions[number].options[3]}`
-    count++;
-    console.log(questionNumber);
+    result.style.color = "green";
+    result.innerText = `Correct Answer is ${questions[questionNumber[count - 1]].answer}`
+    setTimeout(() => {
+        let number = parseInt(Math.random() * questions.length);
+        while (number in questionNumber) {
+            number = parseInt(Math.random() * questions.length);
+        }
+        questionNumber.push(number);
+        question.innerText = `${questions[number].question}`
+        option1.value = `${questions[number].options[0]}`
+        option2.value = `${questions[number].options[1]}`
+        option3.value = `${questions[number].options[2]}`
+        option4.value = `${questions[number].options[3]}`
+        count++;
+        console.log(questionNumber);
+        result.innerText = ""
+    },1500)
 })
 
 function checkAnswer(value) {
