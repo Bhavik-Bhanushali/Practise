@@ -61,3 +61,71 @@
 //   else{
 //     console.log("both Strings are not Anagram")
 //   }
+
+
+// maximum number from array
+// function max1(arr){
+//     let maxnum = arr[0];
+//     for(let i = 1; i < arr.length; i++){
+//       if(arr[i] > maxnum){
+//         maxnum = arr[i];
+//       }
+//     }
+//     console.log(maxnum)
+//   }
+//   function max2(arr){
+//     console.log(Math.max(...arr))
+//   }
+//   const arr = [1,3,6,7,3,44,55,77,99,0,5,8,35,68]
+//   max1(arr);
+//   max2(arr);
+
+
+// reverse the string
+// function reverseStr(str){
+//     let reverse1 = ""
+//     for(let i = str.length - 1; i >= 0; i--){
+//       reverse1 += str[i]
+//     }
+//     console.log(`Method-1: ${reverse1}`)
+    
+//     let reverse2 = ""
+//     for(let i = 0 ; i < str.length; i++){
+//       reverse2 = str[i] + reverse2
+//     }
+//     console.log(`Method-2: ${reverse2}`)
+    
+//     console.log(`method-3: ${str.split("").reverse().join("")}`)
+//   }
+  
+//   let str = "bhavik"
+//   reverseStr(str)
+
+// return even number array from given array
+// function even(arr){
+//     let temp = []
+//     for(let i = 0; i < arr.length; i++){
+//       if(arr[i] % 2 === 0){
+//         temp.push(arr[i]);
+//       }
+//     }
+//     // return arr.filter(num => num % 2 === 0)
+//     return temp
+    
+//   }
+//   const arr = [1,3,6,7,3,44,55,77,99,0,5,8,35,68];
+//   const evenArr = even(arr);
+//   console.log(evenArr);
+
+
+//  factorial of given number
+// function factorial(num){
+//     if(num === 0 || num === 1){
+//       return 1;
+//     }
+//     return num * factorial(num - 1)
+//   }
+//   let num = 5;
+//   console.log(`factorial of ${num} is ${factorial(num)}`)
+
+
