@@ -281,5 +281,102 @@
 // }
 
 // PATTERN
+// let num = 6;
+// let count = 1;
+// for(let i = 1 ; i <= num; i++){
+//   let str = "";
+//   for(let j = 1;j <= i; j++){
+//     str+=`${count} `;
+//     count++;
+//   }
+//   console.log(str)
+// }
+
+// let num = 6;
+// let count = 1;
+// for(let i = 1 ; i <= num; i++){
+//   let str = "";
+//   let count = 1;
+//   for(let j = num;j >= i; j--){
+//     str+=`${count} `;
+//     count++;
+//   }
+//   console.log(str)
+// }
 
 
+// let num = 6;
+// for(let i = 1 ; i <= num; i++){
+//   let str = "";
+//   for(let k = num; k >= i; k--){
+//     str += " "
+//   }
+//   for(let j = 1; j <= i ; j++){
+//     str += `${j} `;
+//   }
+//   console.log(str)
+// }
+
+// let num = 4;
+// let count = 1
+// for(let i = 1 ; i <= num; i++){
+//   let str = "";
+//   for(let k = num; k >= i; k--){
+//     str += " "
+//   }
+//   for(let j = 1; j <= i ; j++){
+//     str += `${count} `;
+//     count++;
+//   }
+//   console.log(str)
+// }
+
+
+// let num = 6;
+// for(let i = 1 ; i <= num; i++){
+//   let str = "";
+//   for(let j = num; j >= i ; j--){
+//     str += `${j} `;
+//   }
+//   console.log(str)
+// }
+
+
+// let num = 6;
+// for(let i = 1 ; i <= num; i++){
+//   let str = "";
+//   let count = 7-i;
+//   for(let j = num; j >= i ; j--){
+//     str += `${count} `;
+//     count--;
+//   }
+//   console.log(str)
+// }
+
+
+// let num = 50;
+// let flag = true;
+// let count = 1;
+// let height = 10;
+// for(let i = 1 ; i <= num; i++){
+//   let str = "";
+//   for(let j = 1; j <= count ; j++){
+    
+//     str += "* ";
+    
+//   }
+//   if(count === 1 ){
+//     flag = true
+//   } 
+//   else if(count === height ){
+//     flag = false
+//   } 
+//   if(flag)
+//   {
+//     count++;
+//   }
+//   else if(!flag){
+//     count--
+//   } 
+//   console.log(str)
+// }
