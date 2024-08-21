@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change background color</title>
+    <style>
+        button{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let loop = null;
+        const body = document.querySelector("body");
+        const start = document.getElementById("start");
+        const stop = document.getElementById("stop");
+        let entry = true;
+        start.addEventListener("click", () => {
+            if(!entry){
+                console.log("Already start");
+                
+            }
+            else{
+                const red = parseInt(Math.random () * 256);
+                const green = parseInt(Math.random () * 256);
+                const blue = parseInt(Math.random () * 256);
+                body.style.backgroundColor = `RGB(${red},${green},${blue})`;
+                console.log(`RGB(${red},${green},${blue})`);
+                loop = setInterval(() => {
+                const red = parseInt(Math.random () * 256);
+                const green = parseInt(Math.random () * 256);
+                const blue = parseInt(Math.random () * 256);
+                body.style.backgroundColor = `RGB(${red},${green},${blue})`;
+                console.log(`RGB(${red},${green},${blue})`);
+                },2000);
+                entry = false;
+            }
+        });
+        stop.addEventListener("click", () => {
+            clearInterval(loop);
+            entry = true;
+        })
+    </script>
+</body>
+</html>
