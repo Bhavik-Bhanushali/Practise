@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <style>
+        input{
+            display: block;
+            margin: 20px;
+            font-size: 20px;
+        }
+        .container{
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            background-color: aliceblue;
+            margin: auto;
+        }
+        #question{
+            margin: 10px 20px;
+            font-size: 30px;
+            height: 100px;
+        }
+        #skip{
+            margin: 20px auto;
+            width: 100px;
+            font-size: 20px;
+        }
+        #result{
+            font-size: 30px;
+            margin: 20px;
+        }
+        h1{
+            display: flex;
+            margin: auto;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <div class="container">
+        <div class="top">
+
+            <span>Points: <span id="point"></span></span>
+        </div>
+        <h1>Quiz Game</h1>
+        <p id="question"></p>
+        <input type="button" value="" id="opetion1" onclick="checkAnswer(value)">
+        <input type="button" value="" id="opetion2" onclick="checkAnswer(value)">
+        <input type="button" value="" id="opetion3" onclick="checkAnswer(value)">
+        <input type="button" value="" id="opetion4" onclick="checkAnswer(value)">
+        <button id="skip">Skip</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

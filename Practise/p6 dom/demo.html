@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #container{
+            width: 600px;
+            height: 600px;
+            background-color: blue;
+            position: relative;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <p id="para"></p>
+
+    <a href="">Google</a><br>
+    <button onclick="document.body.style.backgroundColor = 'red'">Click Me</button>
+
+
+    <p>
+        <button onclick="move()">Animate</button>
+    </p>
+    <div id="container">
+        <div id="box"></div>
+    </div>
+
+    <script>
+        const p = document.getElementById("para");
+        p.innerHTML = "hello";
+        p.innerText = "world";
+        p.style.backgroundColor = "red"
+
+        document.querySelector("a").setAttribute("href","www.google.com")
+
+        const append = document.querySelector("body").appendChild(document.createElement("p"));
+        append.innerHTML = "bhavik";
+
+        const body = document.querySelector("body");
+        body.removeChild(append)
+        body.replaceChild(append,p)
+        document.write(Date()) // write direct into html content
+
+        function move() {
+            let id = null;
+            const box = document.getElementById("box");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+            function frame(){
+                if(pos == 500){
+                    console.log("hh");
+                    
+                    clearInterval(id);
+                } else{
+                    pos++;
+                    box.style.top = pos + "px";
+                    box.style.left = pos + "px";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouAreStupid.com</title>
+    <style>
+        #container{
+            width: 50vw;
+            height: 50vh;
+            /* background-color: burlywood; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin: 20vh auto;
+        }
+        body{
+            background-color: #efefef;
+        }
+        button{
+            font-size: 40px;
+        }
+        #no{
+            width: 300px;
+            position: absolute;
+            margin-left: 20px;
+        }
+        #stupidImg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #text{
+            position: absolute;
+            font-size: 50px;
+        }
+        #stupidText{
+            position: absolute;
+            animation: rotate 10s normal 0s infinite ;
+        }
+        @keyframes rotate {
+            0%{
+                top:30%;
+                left: 20%;
+            }
+            25%{
+                top:30%;
+                left: 70%;
+            }
+            50%{
+                top:70%;
+                left: 70%;
+            }
+            75%{
+                top:70%;
+                left: 20%;
+            }
+            100%{
+                top:30%;
+                left: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p id="stupidText"></p>
+    <p id="text"></p>
+    <div id="container">
+        <h1 style="font-size: 60px;">Are you Stupid?</h1>
+        <div>
+            <button id="yes">Yes, I am Stupid</button>
+            <button id="no">No</button>
+        </div>
+    </div>
+    <div id="stupidImg"><img src="" alt="" id="img"></div>
+
+    <script>
+        const container = document.getElementById("container");
+        const stupidText = document.getElementById("stupidText");
+        const img = document.getElementById("img");
+        const body = document.querySelector("body");
+        const text = document.getElementById("text");
+        const no = document.getElementById("no");
+        no.addEventListener("mouseover", () => {
+            const x = parseInt(Math.random() * 1500);
+            const y = parseInt(Math.random() * 800);
+            no.style.top = y + "px";
+            no.style.left = x + "px";
+        })
+        document.getElementById("yes").addEventListener("click", () => {
+            body.removeChild(container);
+            img.style.width = "700px";
+            img.style.height = "500px";
+            img.src = "https://res.cloudinary.com/teepublic/image/private/s--p5koDt_B--/c_crop,x_10,y_10/c_fit,w_1109/c_crop,g_north_west,h_709,w_1260,x_-76,y_-130/co_rgb:000000,e_colorize,u_Misc:One%20Pixel%20Gray/c_scale,g_north_west,h_709,w_1260/fl_layer_apply,g_north_west,x_-76,y_-130/bo_0px_solid_white/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1589326319/production/designs/10084389_0.jpg";
+            img.style.marginTop = "250px";
+            stupidText.innerHTML = "You are Stupid!!!!";
+            stupidText.style.fontSize = "30px";
+            stupidText.style.zIndex = 2;
+            text.innerHTML = "Stupid";
+            text.style.zIndex = 3;
+            let x = 0;
+            let y = 0;
+            let xFlag = true;
+            let yFlag = true;
+            setInterval(() => {
+                if(x < 1 || x > 1700){
+                    xFlag = !xFlag;
+                }
+                if(y < 1 || y > 800){
+                    yFlag = !yFlag;
+                }
+                if(!xFlag){
+                    x += 5;
+                }
+                else{
+                    x -= 5;
+                }
+                if(!yFlag){
+                    y += 5;
+                }
+                else{
+                    y -= 5;
+                }
+                text.style.top = y + "px";
+                text.style.left = x + "px";
+            },20)
+        })
+    </script>
+</body>
+</html>
