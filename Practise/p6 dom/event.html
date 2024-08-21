@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <p><input type="button" value="Button" id="btn"></p>
+
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("mouseover", () => {
+            console.log(btn.value);
+            
+            btn.value = "mouse over"
+        })
+        btn.addEventListener("mouseout", () => {
+            btn.value = "Button";
+        })
+        // btn.addEventListener("click", () => {
+        //     alert("Single click");
+        // })
+        btn.addEventListener("dblclick", () => {
+            alert("Double click")
+        })
+        window.addEventListener("load", () => {
+            alert("Welcome");
+        })
+    </script>
+</body>
+</html>

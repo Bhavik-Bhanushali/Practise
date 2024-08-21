@@ -380,3 +380,18 @@
 //   } 
 //   console.log(str)
 // }
+
+// string cross pattern
+// let str = "bhanushali";
+// for(let i = 0; i < str.length; i++){
+//     let temp = "";
+//     for(let j = 0; j < str.length; j++){
+//       if(j === i || j === str.length - i - 1){
+//         temp += `${str[j]}  `
+//       }
+//       else{
+//         temp += "  "
+//       }
+//     }
+//     console.log(temp)
+//   }
