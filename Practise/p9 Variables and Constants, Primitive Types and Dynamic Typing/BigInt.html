@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigInt</title>
+</head>
+<body>
+    <h1>bigint data type:</h1>
+    <p id="type1"></p>
+    <p id="type2"></p>
+
+    <script>
+        const type1 = document.getElementById("type1");
+        const type2 = document.getElementById("type2");
+        let num1 = BigInt("123456789");
+        let num2 = 123456789n;
+        type1.innerHTML = num1 +"-" + (typeof num1);
+        type2.innerHTML = num2 +"-" + (typeof num2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+    <style>
+        input{
+            margin: 20px;
+        }
+        button{
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="num1" placeholder="Enter the Number">
+        <input type="number" id="point" placeholder="Exponential/Fixed/Precision" min="0">
+        <br>
+        <button onclick="toStringFunc()">toString()</button> 
+        <button onclick="toExponentialFunc()">toExponential()</button>
+        <button onclick="toFixedFunc()">toFixed()</button>
+        <button onclick="toPrecisionFunc()">toPrecision()</button>
+        <button onclick="valueOfFunc()">valueOf()</button>
+        <button onclick="isNaNFunc()">isNaN()</button><br><hr>
+        <button onclick="MAX_VALUEFunc()">MAX_VALUE</button>
+        <button onclick="MIN_VALUE()">MIN_VALUE</button>
+        <button onclick="MAX_SAFE_INTEGERFunc()">MAX_SAFE_INTEGER</button>
+        <button onclick="MIN_SAFE_INTEGERFunc()">MIN_SAFE_INTEGER</button>
+        <button onclick="POSITIVE_INFINITYFunc()">POSITIVE_INFINITY</button>
+        <button onclick="NEGATIVE_INFINITYFunc()">NEGATIVE_INFINITY</button>
+    </div>
+    <p id="result"></p>
+
+
+    <script>
+        const num1 = document.getElementById("num1");
+        const result = document.getElementById("result");
+        const point = document.getElementById("point");
+
+        function toStringFunc(){
+            result.innerHTML = `${(Number(num1.value)).toString()}`
+        } // Returns a number as a string 
+        function toExponentialFunc(){
+            result.innerHTML = `${(Number(num1.value)).toExponential(parseInt(point.value))}`
+        } // Returns a number written in exponential notation
+        function toFixedFunc(){
+            result.innerHTML = `${(Number(num1.value)).toFixed(parseInt(point.value))}`
+        } // Returns a number written with a number of decimals
+        function toPrecisionFunc(){
+            result.innerHTML = `${(Number(num1.value)).toPrecision(parseInt(point.value))}`
+        } // Returns a number written with a specified length
+        function valueOfFunc(){
+            result.innerHTML = `${(Number(num1.value)).valueOf()}`
+        } // Returns a number as a number(Object to primitive)
+        function isNaNFunc(){
+            result.innerHTML = `${isNaN(Number(num1.value))}`
+        }
+        function MAX_VALUEFunc(){
+            result.innerHTML = `${Number.MAX_VALUE}`
+        } // The largest number possible in JavaScript
+        function MIN_VALUE(){
+            result.innerHTML = `${Number.MIN_VALUE}`
+        } // The smallest number possible in JavaScript
+        function MAX_SAFE_INTEGERFunc(){
+            result.innerHTML = `${Number.MAX_SAFE_INTEGER}`
+        } // 	The maximum safe integer (2^53 - 1)
+        function MIN_SAFE_INTEGERFunc(){
+            result.innerHTML = `${Number.MIN_SAFE_INTEGER}`
+        } // The minimum safe integer -(2^53 - 1)
+        function POSITIVE_INFINITYFunc(){
+            result.innerHTML = `${Number.POSITIVE_INFINITY}`
+        } // Infinity (returned on overflow)
+        function NEGATIVE_INFINITYFunc(){
+            result.innerHTML = `${Number.NEGATIVE_INFINITY}`
+        } // Negative infinity (returned on overflow)
+    </script>
+</body>
+</html>

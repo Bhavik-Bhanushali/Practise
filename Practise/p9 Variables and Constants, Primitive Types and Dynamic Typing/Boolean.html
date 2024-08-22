@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+<body>
+    <p id="true"></p>
+    <p id="false"></p>
+
+    <script>
+        const True = document.getElementById("true");
+        const False = document.getElementById("false");
+        let a = true;
+        let b = false;
+        True.innerHTML = a + "-" + (typeof a)
+        False.innerHTML = b + "-" + (typeof b)
+    </script>
+</body>
+</html>

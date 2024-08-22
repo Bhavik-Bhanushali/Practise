@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        input{
+            margin: 20px;
+        }
+        button{
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="str1" placeholder="First String" value="boy is a good boy.">
+        <input type="text" id="str2" placeholder="Second String" value="b">
+        <input type="number"  id="index" placeholder="index" min="0" value="0"><br>
+        <button onclick="Length()">length</button>
+        <button onclick="Concate()">concat()</button>
+        <button onclick="CharAt()">charAt()</button>
+        <button onclick="CharCodeAt()">charCodeAt()</button>
+        <button onclick="At()">at()</button>
+        <button onclick="Bracket()">[Index]</button><br>
+        <button onclick="ToUpperCase()">toUpperCase()</button>
+        <button onclick="ToLowerCase()">toLowerCase()</button>
+        <button onclick="Trim()">trim()</button>
+        <button onclick="TrimStart()">trimStart()</button>
+        <button onclick="TrimEnd()">trimEnd()</button>
+        <button onclick="Split()">split()</button><br><hr>
+        <label for="start">Start:</label>
+        <input type="number" id="start" placeholder="Starting position" value="0">
+        <label for="stop">Stop</label>
+        <input type="number" id="stop" placeholder="Ending position / Length" value="0">
+        <label for="repeat">Repeat-Count / Pad:</label>
+        <input type="number" id="repeat" value="1"><br>
+        <button onclick="Slice()">slice()</button>
+        <button onclick="Substring()">substring()</button>
+        <button onclick="Substr()">substr()</button>
+        <button onclick="Repeat()">repeat()</button>
+        <button onclick="PadStart()">padStart()</button>
+        <button onclick="PadEnd()">padEnd()</button><br><hr>
+        <input type="text" id="wantReplace" placeholder="want to replace String">
+        <input type="text" id="replaced" placeholder="Replaced Word"><br>
+        <button onclick="Replace()">replace()</button>
+        <button onclick="ReplaceAll()">replaceAll()</button>
+    </div>
+    <p id="result"></p>
+    <script>
+        const str1 = document.getElementById("str1");
+        const str2 = document.getElementById("str2");
+        const index = document.getElementById("index");
+        const start = document.getElementById("start");
+        const stop = document.getElementById("stop");
+        const repeat = document.getElementById("repeat")
+        const wantReplace = document.getElementById("wantReplace");
+        const replaced = document.getElementById("replaced");
+        const result = document.getElementById("result");
+
+        function Length() { result.innerHTML = (str1.value).length}
+        function Concate() { result.innerHTML = (str1.value) + (str2.value)}
+        function CharAt() { result.innerHTML = (str1.value).charAt(parseInt(index.value))}
+        function CharCodeAt() { result.innerHTML = (str1.value).charCodeAt(parseInt(index.value))}
+        function At() { result.innerHTML = (str1.value).at(parseInt(index.value))} // we can also give negetive values
+        function Bracket() { result.innerHTML = (str1.value)[parseInt(index.value)]}
+        function ToUpperCase() { result.innerHTML = (str1.value).toUpperCase()}
+        function ToLowerCase() { result.innerHTML = (str1.value).toLowerCase()}
+        function Trim() { result.innerHTML = (str1.value).trim() +(str1.value).length}
+        function TrimStart() { result.innerHTML = (str1.value).trimStart() +(str1.value).length}
+        function TrimEnd() { result.innerHTML = (str1.value).trimEnd() + (str1.value).length}
+        function Split() { result.innerHTML = (str1.value).split("")}
+        function Slice() { if(parseInt(stop.value) === 0) {result.innerHTML = (str1.value).slice(parseInt(start.value))}
+            else {result.innerHTML = (str1.value).slice(parseInt(start.value), parseInt(stop.value))}}
+        function Substring() { if(parseInt(stop.value) === 0) {result.innerHTML = (str1.value).substring(parseInt(start.value))}
+            else {result.innerHTML = (str1.value).substring(parseInt(start.value), parseInt(stop.value))}}
+        function Substr() { if(parseInt(stop.value) === 0) {result.innerHTML = (str1.value).substr(parseInt(start.value))}
+        else {result.innerHTML = (str1.value).substr(parseInt(start.value), parseInt(stop.value))}}
+        function Repeat() {result.innerHTML = (str1.value).repeat(parseInt(repeat.value)) }
+        function PadStart() { result.innerHTML = "".padStart(parseInt(repeat.value),"x") + str1.value}
+        function PadEnd() { result.innerHTML = (str1.value).padEnd(parseInt(repeat.value),"x") + "".padEnd(parseInt(repeat.value),"x") }
+        function Replace() { result.innerHTML = (str1.value).replace(wantReplace.value , replaced.value)}   
+        function ReplaceAll() { result.innerHTML = (str1.value).replaceAll(wantReplace.value, replaced.value)}
+    </script>
+</body>
+</html>

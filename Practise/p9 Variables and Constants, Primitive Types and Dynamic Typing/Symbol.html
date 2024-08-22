@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol</title>
+</head>
+<body>
+    <h1> Cannot convert a Symbol value to a string, So view console</h1>
+
+    <script>
+        const result = document.getElementById("result");
+        let a = 1234;
+        let s = Symbol(a);
+        console.log(s);
+        console.log("type: " + (typeof s));
+    </script>
+</body>
+</html>
