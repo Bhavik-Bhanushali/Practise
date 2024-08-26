@@ -395,3 +395,84 @@
 //     }
 //     console.log(temp)
 //   }
+
+// number triangle with change the order in each end
+// let num = 20;
+// for(let i =1; i <= num; i++){
+//   let str = ""
+//   for(let j =1; j <= i; j++){
+//     if(i % 2 === 0){
+//       str += `${i - j + 1} `;
+//     }
+//     else{
+//       str += `${j} `;
+//     }
+//   }
+//   console.log(str)
+// }
+
+
+// let num = 20;
+// let flag = true;
+// for(let i =1; i <= num; i++){
+//   let str = ""
+//   for(let j =1; j <= i; j++){
+//     if(flag){
+//       str += `||| `;
+//       flag = !flag;
+//     }
+//     else{
+//       str += `☰ `;
+//       flag = !flag;
+//     }
+//   }
+//   if(i % 2 === 0)  flag = !flag;
+//   console.log(str)
+// }
+
+// function print1(num, row, start, count){
+//     let str;
+//     let time = 0;
+//     for(let i = row; i <= num; i++){
+//       str = "";
+//       let k = 1;
+//       // console.log( i + " " + row)
+//       for(let j = row; j <= num ; j++){
+//         // console.log(i === row)
+//         if(count > 1){
+//           console.log( i + " " + row + (i === row));
+//         }
+//         if(i === row) {
+//           str += `${start + k} `;
+//         }
+//         else if(j === num) {
+//           str += `${start + num + i - 1} `
+//         }
+//         else if(i === num){
+//           str += `${start + num + (num -1) * 2 -  k + 1} `
+//         }
+//         else if(j === row){ 
+//           str += `${start + num + (num-1) * 2 + num - 2 - i + row + 1} ` 
+//         }
+//         else if(i === row + 1 && time === 0){
+//           // console.log(`${num - 1} ${row + 1} ${start + num + (num - row) * 2 + num - 2 - row  + 1} ${count + 1}`)
+//           str += print1(num - 1, row +1, start + num + (num - row) * 2 + num - 2 - row, count + 1);
+//           // console.log(start);
+//           time++;
+//         }
+//         k++;
+//     }
+    
+//     if(count === 1 ){
+//       console.log(str);
+//     }
+//     if(time === 1) time--
+//     // console.log( i + " " + row)
+//     }
+//     return str;
+//   }
+  
+//   let num = 6;
+  
+//   print1(num,1, 0, 1)
+  // (j === row + 1 && i === row + 1) || (j === num - row + 1 && i === row + 1) || (j === row + 1 && i === num - row) || (j === num - row && i === num - row)

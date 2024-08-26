@@ -17,6 +17,53 @@
         let num2 = 123456789n;
         type1.innerHTML = num1 +"-" + (typeof num1);
         type2.innerHTML = num2 +"-" + (typeof num2);
+        function print1(num, row, start, count){
+  let str;
+  let time = 0;
+  for(let i = row; i <= num; i++){
+    str = "";
+    let k = 1;
+    // console.log( i + " " + row)
+    for(let j = row; j <= num ; j++){
+      // console.log(i === row)
+      if(count > 1){
+        console.log( i + " " + row + (i === row));
+      }
+      if(i === row) {
+        str += `${start + k} `;
+      }
+      else if(j === num) {
+        str += `${start + num + i - 1} `
+      }
+      else if(i === num){
+        str += `${start + num + (num -1) * 2 -  k + 1} `
+      }
+      else if(j === row){ 
+        str += `${start + num + (num-1) * 2 + num - 2 - i + row + 1} ` 
+      }
+      else if(i === row + 1 && time === 0){
+        // console.log(`${num - 1} ${row + 1} ${start + num + (num - row) * 2 + num - 2 - row  + 1} ${count + 1}`)
+        str += print1(num - 1, row +1, start + num + (num - row) * 2 + num - 2 - row, count + 1);
+        // console.log(start);
+        time++;
+      }
+      k++;
+  }
+  
+  if(count === 1 ){
+    console.log(str);
+  }
+  if(time === 1) time--
+  // console.log( i + " " + row)
+  }
+  return str;
+}
+
+let num = 6;
+
+print1(num,1, 0, 1)
+
+// (j === row + 1 && i === row + 1) || (j === num - row + 1 && i === row + 1) || (j === row + 1 && i === num - row) || (j === num - row && i === num - row)
     </script>
 </body>
 </html>
