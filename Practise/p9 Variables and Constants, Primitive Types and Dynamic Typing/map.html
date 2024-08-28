@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+    <h1>Map object</h1>
+    <button id="button">click</button>
+    <p id="answer"></p>
+    <p id="demo"></p>
+
+    <script>
+        const map1 = new Map([
+            ["apple", 1000],
+            ["banana", 750],
+            ["cherry", 500]
+        ]);
+        const answer = document.getElementById("answer");
+        let content = "";
+        document.getElementById("button").addEventListener("click", () => {
+            content += "Keys: <br>"
+            for(let key of map1.keys()){
+                content += `${key} <br>`;
+                // console.log(key);
+                
+            }
+            content += "<br>Values: <br>"
+            for(let value of map1.values()){
+                content += `${value} <br>`;
+                // console.log(key);
+                
+            }
+            content += "<br>Map:<br>"
+            for(let key of map1.keys()){
+                content += `${key}: ${map1.get(key)} <br>`;
+                // console.log(key);
+                
+            }
+            answer.innerHTML = content;
+            content = ""
+        })
+
+//         const fruits = [
+//   {name:"apples", quantity:300},
+//   {name:"bananas", quantity:500},
+//   {name:"oranges", quantity:200},
+//   {name:"kiwi", quantity:150}
+// ];
+
+// // Callback function to select low volumes 
+// function myCallback({ quantity }) {
+//   return quantity > 200 ? "ok" : "low";
+// }
+
+// // Group by ok and low
+// const result = Map.groupBy(fruits, myCallback);
+
+// // Display Results
+// let text ="These fruits are Ok: <br>";
+// for (let x of result.get("ok")) {
+//   text += x.name + " " + x.quantity + "<br>";
+// }
+// text += "<br>These fruits are low: <br>";
+// for (let x of result.get("low")) {
+//   text += x.name + " " + x.quantity + "<br>";
+// }
+// document.getElementById("demo").innerHTML = text;
+
+// console.log(result.get("ok"));
+// console.log(result);
+
+    </script>
+</body>
+
+</html>
