@@ -50,4 +50,4 @@
 // console.log(unsorted.sort(function(a, b){return a - b}))
 // console.log(unsorted.sort(function(a, b){return b - a}))
 // console.log(unsorted.reverse())
-// console.log(numbers.forEach(function(value, index, numbers){return value*2})
+// console.log(numbers.forEach(function(value, index, numbers){return value*2}))

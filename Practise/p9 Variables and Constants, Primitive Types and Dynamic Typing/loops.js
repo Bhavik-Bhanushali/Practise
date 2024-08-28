@@ -36,7 +36,7 @@
 // function myFunction(value,index, array) {
 //   console.log(index + " " +  value + " " + array[index])
 // }
-
+    
 // for of loop
 // const numbers = [45, 4, 9, 16, 25];
 
