@@ -476,3 +476,37 @@
   
 //   print1(num,1, 0, 1)
   // (j === row + 1 && i === row + 1) || (j === num - row + 1 && i === row + 1) || (j === row + 1 && i === num - row) || (j === num - row && i === num - row)
+
+
+// spiral number pattern
+//   const num = 7;
+// const matrix = [num];
+// for (let i = 0; i < num; i++) {
+//   matrix[i] = []
+// }
+// let count = 1;
+// let top = 0, right = num - 1, bottom = num - 1, left = 0;
+// while(count <= num * num){
+//   for(let i = left; i <= right; i++){
+//     matrix[top][i] = count++;
+//   }
+//   top++;
+//   for(let i = top; i <= bottom; i++){
+//     matrix[i][right] = count++;
+//   }
+//   right--;
+//   for(let i = right; i >= left; i--){
+//     matrix[bottom][i] = count++;
+//   }
+//   bottom--;
+//   for(let i = bottom; i >= top; i--){
+//     matrix[i][left] = count++;
+//   }
+//   left++;
+// }
+// let output = ""
+// for(const arr of matrix){
+//   output += arr.join(" ") + "\n";
+// }
+// console.log(output)
+// console.log(matrix)
