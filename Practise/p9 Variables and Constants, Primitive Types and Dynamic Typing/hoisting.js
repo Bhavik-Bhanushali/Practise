@@ -19,3 +19,8 @@ var g = 9
 var h;
 console.log(g + " " + h)
 h = 324;  // h is declare but not initialized
+
+show();
+function show(){
+  console.log("sdfdghj")
+}
