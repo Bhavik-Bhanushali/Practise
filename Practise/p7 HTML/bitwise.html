@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        const result = document.getElementById("result");
+        const number = parseInt(prompt("Enter the Number:"))
+        const binary = number.toString(2);
+        let count =  0;
+        let temp = number;
+        // while(temp){
+        //     count += temp & 1;
+        //     temp >>= 1;
+        // }
+        // result.innerHTML = `Total count of 1 in binary of this ${number} number (${binary}) is ${count}`;
+
+        // const answer = number > 0 && (number & (number - 1)) === 0
+        // if(answer) result.innerHTML = `${number} is power of 2`;
+        // else result.innerHTML = `${number} is not power of 2`;
+
+        // let reverse = 0;
+        // for(let i = 1; i <= 32; i++){
+        //     reverse <<= 1;
+        //     reverse |= temp & 1;
+        //     temp >>>= 1;
+        // }
+        // result.innerHTML = `in binary ${reverse.toString(2)} (${reverse})`
+
+        // while(temp > 0){
+        //     count++;
+        //     temp >>= 1;
+        // }
+        // result.innerHTML = `Higher order 1-bit is on ${count} position for ${number}(${binary})`
+
+        
+    </script>
+</body>
+</html>
