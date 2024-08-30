@@ -27,7 +27,7 @@
 //     }
 //   }
 //     console.log(str);
-  
+
 // }
 
 
@@ -361,9 +361,9 @@
 // for(let i = 1 ; i <= num; i++){
 //   let str = "";
 //   for(let j = 1; j <= count ; j++){
-    
+
 //     str += "* ";
-    
+
 //   }
 //   if(count === 1 ){
 //     flag = true
@@ -462,7 +462,7 @@
 //         }
 //         k++;
 //     }
-    
+
 //     if(count === 1 ){
 //       console.log(str);
 //     }
@@ -471,11 +471,11 @@
 //     }
 //     return str;
 //   }
-  
+
 //   let num = 6;
-  
+
 //   print1(num,1, 0, 1)
-  // (j === row + 1 && i === row + 1) || (j === num - row + 1 && i === row + 1) || (j === row + 1 && i === num - row) || (j === num - row && i === num - row)
+// (j === row + 1 && i === row + 1) || (j === num - row + 1 && i === row + 1) || (j === row + 1 && i === num - row) || (j === num - row && i === num - row)
 
 
 // spiral number pattern
@@ -524,3 +524,126 @@
 //   console.log(str)
 // }
 
+// dimond tree pattern
+// const num = 9;
+// for(let i = 1; i <= num; i++){
+//   let str = ""
+//   for(let j = 0; j <= num * 2; j++){
+//     if(j < num - i ) str += " "
+//     else if(j >= num - i && j < num) str += "("
+//     else if(j === num) str += "*"
+//     else if(j > num && j < num + i + 1) str += ")"
+//   }
+//   console.log(str)
+// }
+
+// for(let i = 1; i <= num; i++){
+//   let str = ""
+//   for(let j = num * 2; j >= 0; j--){
+//     if(j > num * 2 - i) str += " "
+//     else if(j <= num * 2 - i && j > num ) str += "("
+//     else if(j === num && i < num) str += "*"
+//     else if(j <= num && j < num - i ) str += ")"
+//   }
+//   console.log(str)
+// }
+
+
+// print LED number pattern
+// const numbers = "1234567890";
+// let p1,p2,p3,p4,p5,p6,s1,s2,s3,s4,s5,s6,s7;
+// for(const num of numbers){
+// p1 = p2 = p3 = p4 = p5 = p6 = p7 = s1 = s2 = s3 = s4 = s5 = s6 = s7 = true;
+//   switch(num){
+//     case "1":
+//       s1 = p1 = s6 = p6 = s7 = s5 = p5 = s4 = false;
+//       break;
+//     case "2":
+//       s6 = s3 = false;
+//       break;
+//     case "3":
+//       s6 = s5 = false;
+//       break;
+//     case "4":
+//       s1 = s5 = s4 = p5 = false;
+//       break;
+//     case "5":
+//       s2 = s5 = false;
+//       break;
+//     case "6":
+//       s2 = false;
+//       break;
+//     case "7":
+//       s6 = p6 = s7 = s5 = p5 = s4 = false;
+//       break;
+//     case "8":
+//       break;
+//     case "9":
+//       s5 = false;
+//       break;
+//     case "0":
+//       s7 = false;
+//       break;
+//   }
+//   for(let i = 1; i <= 7; i++){
+//     let str = "";
+//     for(let j = 1; j <= 4; j++){
+//       if(i === 1 && j === 1 && p1) str +="# ";
+//       else if(i === 1 && j > 1 && j < 4 && s1) str +="# ";
+//       else if(i === 1 && j === 4 && p2) str +="# ";
+//       else if(i > 1 && i < 4 & j === 1 && s6) str +="# ";
+//       else if(i > 1 && i < 4 & j === 4 && s2) str +="# ";
+//       else if(i === 4 && j === 1 && p6) str +="# ";
+//       else if(i === 4 && j > 1 && j < 4 && s7) str +="# ";
+//       else if(i === 4 && j === 4 && p3) str +="# ";
+//       else if(i > 4 && i < 7 & j === 1 && s5) str +="# ";
+//       else if(i > 4 && i < 7 & j === 4 && s3) str +="# ";
+//       else if(i === 7 && j === 1 && p5) str +="# ";
+//       else if(i === 7 && j > 1 && j < 4 && s4) str +="# ";
+//       else if(i === 7 && j === 4 && p4) str +="# ";
+//       else str += "  "
+//     }
+//     console.log(str)
+//   }
+//   console.log("\n")
+// }
+// different method
+// const numbers = "1234567890";
+// for (const num of numbers) {
+//   let str = ""
+//   switch (num) {
+//     case "1":
+//       str = "      #\n      #\n      #\n      #\n      #\n      #\n      #\n";
+//       break;
+//     case "2":
+//       str = "# # # #\n      #\n      #\n# # # #\n#      \n#      \n# # # #\n";
+//       break;
+//     case "3":
+//       str = "# # # #\n      #\n      #\n# # # #\n      #\n      #\n# # # #\n";
+//       break;
+//     case "4":
+//       str = "#     #\n#     #\n#     #\n# # # #\n      #\n      #\n      #\n";
+//       break;
+//     case "5":
+//       str = "# # # #\n#      \n#      \n# # # #\n      #\n      #\n# # # #\n";
+//       break;
+//     case "6":
+//       str = "# # # #\n#      \n#      \n# # # #\n#     #\n#     #\n# # # #\n";
+//       break;
+//     case "7":
+//       str = "# # # #\n      #\n      #\n      #\n      #\n      #\n      #\n";
+//       break;
+//     case "8":
+//       str = "# # # #\n#     #\n#     #\n# # # #\n#     #\n#     #\n# # # #\n";
+//       break;
+//     case "9":
+//       str = "# # # #\n#     #\n#     #\n# # # #\n      #\n      #\n# # # #\n";
+//       break;
+//     case "0":
+//       str = "# # # #\n#     #\n#     #\n#     #\n#     #\n#     #\n# # # #\n";
+//       break;
+//   }
+//   console.log(str)
+//   console.log("\n")
+
+// }
