@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrow Function</title>
+    <style>
+        *{
+            margin: 20px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="num1" placeholder="Enter the Number" />
+        <input type="text" id="num2" placeholder="Enter the Number" /><br />
+        <input type="button" onclick="mathFuncton(value)" value="+" />
+        <input type="button" onclick="mathFuncton(value)" value="-" />
+        <input type="button" onclick="mathFuncton(value)" value="*" />
+        <input type="button" onclick="mathFuncton(value)" value="/" />
+    </div>
+
+    <p> Result: <span id="result"></span></p>
+    <script>
+        const num1 = document.getElementById("num1");
+        const num2 = document.getElementById("num2");
+        const result = document.getElementById("result");
+        const mathFuncton = (operator) => {
+            switch (operator) {
+                case '+':
+                    const answer = (parseFloat(num1.value) + parseFloat(num2.value))
+                    result.innerHTML = answer;
+                    console.log(answer);
+
+                    break;
+                case '-':
+                    result.innerHTML = parseFloat(num1.value) - parseFloat(num2.value);
+                    break;
+                case '*':
+                    result.innerHTML = parseFloat(num1.value) * parseFloat(num2.value);
+                    break;
+                case '/':
+                    result.innerHTML = parseFloat(num1.value) / parseFloat(num2.value);
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
