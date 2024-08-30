@@ -510,3 +510,17 @@
 // }
 // console.log(output)
 // console.log(matrix)
+
+// tree pattern
+// const num = 9;
+// for(let i = 1; i <= num; i++){
+//   let str = ""
+//   for(let j = 0; j <= num * 2; j++){
+//     if(j < num - i ) str += " "
+//     else if(j >= num - i && j < num) str += "("
+//     else if(j === num) str += "*"
+//     else if(j > num && j < num + i + 1) str += ")"
+//   }
+//   console.log(str)
+// }
+
