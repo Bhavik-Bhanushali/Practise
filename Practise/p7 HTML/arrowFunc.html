@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <button id="btn">Click Me</button>
+    <p id="demo"></p>
+
+    <script>
+        // const func1 = () => "Hello!"
+        // console.log(func1())
+
+        // const func2 = (a,b) => a*b
+        // console.log(func2(3,5))
+
+        // const func3 = () => {
+        //   console.log("Hello!");
+        // }
+        // func3()
+
+        // const func4 = x => x**2;
+        // console.log(func4(4))
+
+        // const func5 = (val) => "Hello " + val;
+        // console.log(func5("user"))
+
+        const demo = document.getElementById("demo");
+
+        // const simpleFunc = function(){
+        //     demo.innerHTML += this;
+        // }
+        // window.addEventListener("load",simpleFunc)
+        // document.getElementById("btn").addEventListener("click",simpleFunc)
+
+        const arrowFunc = () => {
+            demo.innerHTML += this;
+        }
+        window.addEventListener("load",arrowFunc)
+        document.getElementById("btn").addEventListener("click",arrowFunc)
+
+    </script>
+</body>
+
+</html>
