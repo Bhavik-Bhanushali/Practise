@@ -1,14 +1,14 @@
-// class demo{
-//     constructor(username, email, password){
-//         this.username =username;
-//         this.email = email;
-//         this.password = password;
-//     }
-//     greet(){
-//         console.log("Hello, " + this.username)
-//     }
-// }
-// const obj = new demo("bhavik", "temp@gmail.com", "1234");
+class demo{
+    constructor(username, email, password){
+        this.username =username;
+        this.email = email;
+        this.password = password;
+    }
+    greet(){
+        console.log("Hello, " + this.username)
+    }
+}
+export const obj = new demo("bhavik", "temp@gmail.com", "1234");
 // obj.greet()
 
 
