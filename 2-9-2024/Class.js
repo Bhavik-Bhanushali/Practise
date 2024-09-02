@@ -11,6 +11,7 @@
 // const obj = new demo("bhavik", "temp@gmail.com", "1234");
 // obj.greet()
 
+
 // inhertance
 // class Animal {
 //     constructor(name) {
@@ -30,7 +31,6 @@
 //     }
 //     sound() {
 //         console.log("Barking!");
-
 //     }
 //     sleep(){
 //         console.log("Sleeping...");
@@ -41,6 +41,7 @@
 // dog.sound()
 // dog.eat();
 // console.log(dog.name + " " + dog.brid);
+
 
 // Encapsulation
 // class BankAccount{
@@ -107,3 +108,51 @@
 // d.greet()
 // d.greet("Bhavik")
 
+
+// getter and setter
+// class Temp{
+//     constructor(username, age){
+//         this.username = username;
+//         this._age = age;
+//     }
+//     get unam(){
+//         return this.username;
+//     }
+//     set unam(username){
+//         this.username = username;
+//     }
+//     get age(){
+//         return this._age;
+//     }
+//     set age(age){
+//         this._age = age;
+//     }
+// }
+// const t = new Temp("Bhavin", 19);
+// console.log(t.unam);
+// t.unam ="Bhavik";
+// console.log(t.unam);
+// console.log(t.age);
+// t.age = 20;
+// console.log(t.age);
+
+
+// Static 
+// class Static{
+//     constructor(name){
+//         this.name = name;
+//     }
+//     static className = "Static"; // Use with only Class not access by objects
+//     greet(){
+//         console.log("Hello, " + this.name);
+//     }
+//     static show(){
+//         console.log("This is a " + this.className + " Class!");
+//     }
+// }
+// const s = new Static("Bhavik");
+// s.greet()
+// console.log(s.className);   // undefined
+// // s.show();  // give an Error
+// console.log(Static.className);
+// Static.show()
