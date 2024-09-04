@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        const result = document.getElementById("result");
+
+        function print(some){
+            result.innerHTML = some;
+        }
+
+        // async function demo(){
+        //     return "Hello";
+        // }
+        // demo().then(
+        //     function(value) {print(value)}
+        // )
+
+        // async function func(){
+        //     let myPromise = new Promise((resolve, reject) => {
+        //         resolve("I Love India");
+        //         // reject("I Love India");  // not give any output
+        //     });
+        //     result.innerHTML = await myPromise;
+        // }
+        // func()
+        // result.innerHTML = "Hello";     // if Promise give rejection this will the output;
+
+        async function myFunc(){
+            let proms = new Promise((resolve) => {
+                setTimeout(() => {
+                    result.innerHTML = "I Love India!!"
+                },3000)
+            });
+        }
+        myFunc()
+    </script>
+</body>
+</html>
