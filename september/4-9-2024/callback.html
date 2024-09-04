@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <p id="display"></p>
+
+    <script>
+        const result = document.getElementById("display");
+
+        // function display1(answer){
+        //     result.innerHTML = answer;
+        // }
+        // function calculate1(...rest){
+        //     let sum = 0;
+        //     rest.forEach(value => sum += value)
+        //     return sum
+        // }
+        // const temp1 = calculate1(1,2,3,4,4,5,5,6,6,7);
+        // display1(temp1);
+
+        // function display2(answer){
+        //     result.innerHTML = answer;
+        // }
+        // function calculate2(...rest){
+        //     let sum = 0;
+        //     rest.forEach(value => sum += value)
+        //     display2(sum);
+        // }
+        // calculate2(1,2,3,4,4,5,5,6,6,7);
+
+        // function display3(answer){
+        //     result.innerHTML = answer;
+        // }
+        // function calculate3(Callback,...rest){
+        //     let sum = 0;
+        //     rest.forEach(value => sum += value)
+        //     Callback(sum);
+        // }
+        // calculate3(display3,1,2,3,4,4,5,5,6,6,7);
+
+        // function removeNegative(temp2, myCallback){
+        //     const array = []
+        //     for(const x of temp2){
+        //         if(myCallback(x)){
+        //             array.push(x);  
+        //             result.innerHTML = x;  
+        //         }
+        //     }
+        //     return array   
+        // }
+        // const arr = [1,-2,3,-4,5,-6,7,-8,9];
+        // result.innerHTML += removeNegative(arr, (x) => x >= 0);
+    </script>
+</body>
+
+</html>
