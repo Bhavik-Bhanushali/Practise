@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prromise</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        const result  = document.getElementById("result");
+
+        // function displayResult(some){
+        //     result.innerHTML = some;
+        // }
+        // const p1 = new Promise((resolve, reject) => {
+        //     let n = 0;
+        //     // some code
+
+        //     if(n === 0) resolve("Ok");
+        //     else reject("Error");
+        // })
+        // p1.then(
+        //     function(value){displayResult(value)},
+        //     function(error){displayResult(error)}
+        // )
+
+        const p2 = new Promise((resolve, reject) => {
+            setTimeout(() =>{
+                resolve("I Love India!!!!");    // first property executes
+                // reject("I hate Summer");  // we can give only 1 between resolve and reject in Promise
+            }, 3000)
+        })
+        p2.then(
+            function(value) {
+                result.innerHTML += value
+            },
+            function(error) {
+                result.innerHTML += error
+            }
+        )
+    </script>
+</body>
+</html>
