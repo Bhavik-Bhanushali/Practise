@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="time"></p>
+
+    <script>
+        const demo = document.getElementById("demo");
+        const time = document.getElementById("time");
+
+        // //CallBack
+        // function call() {
+        //     demo.innerHTML += "Callback";
+        // }
+        // function main(Callback) {
+        //     setTimeout(function () {
+        //         Callback();
+        //     }, 3000);
+        //     demo.innerHTML += "Main";
+        //     return;
+        // }
+        // main(call)
+
+        // // Promide
+        // const fetchData = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve('Data Fetched!');
+        //     }, 1000)
+        // });
+        // fetchData.then((data) => {
+        //     demo.innerHTML += data.toString();
+        // });
+
+        // // acync await
+        // async function temp() {
+        //     const data = await new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("Data Fetched!");
+        //         }, 2000)
+        //     });
+        //     demo.innerHTML += data
+        // }
+        // temp()
+
+        // function clock(){
+        //     const d = new Date();
+        //     time.innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        //     // time.style.fontSize = d.getSeconds() * 5 +"px";
+        // }
+        // setInterval(clock, 1000)
+    </script>
+</body>
+
+</html>
