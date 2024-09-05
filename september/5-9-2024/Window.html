@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        const result = document.getElementById("result");
+
+        // function show(detail, value){
+        //     result.innerHTML += `${detail} = ${value} <br/>`
+        // }
+        // show("window.innerHeight", window.innerHeight);
+        // show("window.innerWidth", window.innerWidth);
+
+        // show("screen.width", screen.width);
+        // show("screen.height", screen.height);
+        // show("screen.availHeight", screen.availHeight);
+        // show("screen.availWidth", screen.availWidth);
+
+        // show("window.location.href", window.location.href);
+        // show("window.location.hostname", window.location.hostname);
+        // show("window.location.host", window.location.host);
+        // show("window.location.pathname", window.location.pathname);
+        // show("window.location.protocol", window.location.protocol);
+        // // show("window.location.assign", window.location.assign());
+        
+        // show("history.back()", history.back());
+        // show("history.forward()", history.forward());
+        
+        alert("Welocome to My Website!")
+        if(confirm("Are you sure to delete?")){
+            result.innerHTML = "Delete successfully"
+        } else{
+            result.innerHTML = "Delete canceled!"
+        }
+        let input = prompt("Enter your Name:", "User")
+        if(input === null || input === ""){
+            result.innerHTML += `<br/> <br/> User cancel the Prompt!!!`
+        } else{
+            result.innerHTML += `<br/> <br/> Welcome User!, How are you?`
+        }
+        
+    </script>
+</body>
+</html>
