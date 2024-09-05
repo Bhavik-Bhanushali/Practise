@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Event</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <p id="interval"></p>
+    <p id="timeOut"></p>
+    <script>
+        const timeOut = document.getElementById("timeOut");
+        const interval = document.getElementById("interval");
+        const start = document.getElementById("start");
+        const stop = document.getElementById("stop");
+        let loop = null;
+        start.addEventListener("click", () => {
+            setTimeout(() => {
+                timeOut.innerHTML += "This text show after 5 second <br/>"
+            },5000);
+            if(loop === null){
+                loop = setInterval(() => {
+                interval.innerHTML = `Time is update after 2 second ${new Date()}`;
+            },2000)
+            }
+        })
+        stop.addEventListener("click", () => {
+            clearInterval(loop)
+        })
+    </script>
+</body>
+</html>
