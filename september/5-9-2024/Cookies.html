@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookies</title>
-    
     <script>
         function setCookie(cname, cvalue, exdays){
             const d = new Date();
@@ -35,12 +34,18 @@
             else{
                 user = prompt("Please enter your name:", "")
                 if(user != "" && user != null){
-                    setCookie("username", user, 30);
+                    setCookie("username", user, 3);
                 }
             }
+        }
+        function deleteCookies(){
+           document.cookie = "username" + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+           console.log(document.cookie);
+           
         }
         </script>
 </head>
 <body onload="checkCookie()">
+    <button id="delete" onclick="deleteCookies()">Delete Cookies</button>
 </body>
 </html>
