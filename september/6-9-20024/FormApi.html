@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form API</title>
+</head>
+<body>
+    <input type="number" id="input1" min="100" max="400">
+    <button onclick="myFunction()">Check</button>
+    <script>
+        function myFunction(){
+            const input1 = document.getElementById("input1");
+            // if(!input1.checkValidity()){
+            //     alert(input1.validationMessage)
+            // }
+            // else{
+            //     alert("Input ok!")
+            // }
+            console.log("Hello");
+            
+            if(input1.validity.rangeOverflow){
+                alert("value is to large!");
+            }
+            if(input1.validity.rangeUnderflow){
+                alert("value is to Small!");
+            }
+        }
+    </script>
+</body>
+</html>
