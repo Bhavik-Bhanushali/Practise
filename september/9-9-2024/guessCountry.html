@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Country</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #myImg{
+            width: 200px;
+        }
+        #result{
+            height: 50px;
+            font-size: 20px;
+        }
+        #flagName{
+            margin: 30px auto;
+            font-size: 30px;
+        }
+        button{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body onload="changeCountryFlag()">
+    <h1>Enter the country:</h1>
+    <img src="" alt="" id="myImg">
+    <p id="result"></p>
+    <input type="text" id="flagName"><br>
+    <button onclick="checkCountry()">Submit</button>
+
+    <script src="country.js"></script>
+    <script>
+        const result = document.getElementById("result");
+        const myImg = document.getElementById("myImg"); 
+        const codesOfCountry = Object.keys(countryCodes);
+        const flagName = document.getElementById("flagName");
+        let index = 0;
+
+        function changeCountryFlag(){
+            index = parseInt(Math.random() * codesOfCountry.length);
+            const url = `https://flagsapi.com/${codesOfCountry[index]}/flat/64.png`;
+            myImg.src = url;
+        }
+
+        function checkCountry(){
+            if(flagName.value === "" || flagName.value === null){
+                alert("Enter Country Name")
+            }
+            else if(flagName.value == countryCodes[codesOfCountry[index]]){
+                result.style.color = "green";
+                result.innerHTML = "Correct Answer....";
+                setTimeout(() => {
+                    result.innerHTML = "";
+                    flagName.value = "";
+                    changeCountryFlag();
+                }, 3000)
+            } else{
+                result.style.color = "red";
+                result.innerHTML = "Wrong!... Correct answer is " + countryCodes[codesOfCountry[index]] + `(${codesOfCountry[index]})`;
+                setTimeout(() => {
+                    result.innerHTML = "";
+                    flagName.value = "";
+                    changeCountryFlag();
+                }, 3000)
+            }
+            
+        }
+    </script>
+</body>
+</html>
