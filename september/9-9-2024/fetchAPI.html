@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            width: 300px;
+            margin: 30px auto;
+            cursor: pointer;
+        }
+        #myImg{
+            max-height: 800px;
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body onload="changeImg()">
+    <button onclick="changeImg()">Change Image</button>
+    <div id="container">
+        <img src="" alt="" id="myImg">
+    </div>
+
+    <script>
+        
+        const myImg = document.getElementById("myImg");
+        const url = "https://dog.ceo/api/breeds/image/random";
+        function changeImg(){
+            // let width = parseInt(Math.random() * 500 + 300);
+            // let height = parseInt(Math.random() * 500 + 300);
+            // let index = parseInt(Math.random() * 3);
+            // const urls = [
+            //     `https://picsum.photos/${width}/${height}`,
+            //     `https://random.imagecdn.app/${width}/${height}`,
+            //     `https://random.imagecdn.app/v1/image?width=${width}&height=${height}`
+            // ]
+            // myImg.src = urls[index];
+            fetch(url)
+            .then(response => {return response.json()})
+            .then(data => {
+                myImg.src = data.message;
+                console.log(data.message);
+            })
+            .catch(error => console.error("E: " + error));
+        }
+    </script>
+</body>
+</html>
